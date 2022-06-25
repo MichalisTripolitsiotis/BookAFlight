@@ -14,14 +14,14 @@
                         for="from">From:</label>
                     <input
                         class="appearance-none block w-full rounded-md bg-white text-gray-700 border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="from" type="text" name="from">
+                        id="from" type="text" placeholder="Athens, Greece">
                 </div>
                 <div class="mb-6">
                     <label class="block text-lg tracking-wide text-gray-500 dark:text-gray-400"
                         for="to">To:</label>
                     <input
                         class="appearance-none block w-full rounded-md bg-white text-gray-700 border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="to" type="text" name="to">
+                        id="to" type="text" placeholder="Heathrow, England">
                 </div>
                 <div class="grid xl:grid-cols-2 xl:gap-6">
                     <div class="relative z-0 w-full mb-6 group">
