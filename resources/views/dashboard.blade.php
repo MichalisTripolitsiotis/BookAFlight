@@ -14,14 +14,14 @@
                         for="from">From:</label>
                     <input
                         class="appearance-none block w-full rounded-md bg-white text-gray-700 border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="from" type="text">
+                        id="from" type="text" name="from">
                 </div>
                 <div class="mb-6">
                     <label class="block text-lg tracking-wide text-gray-500 dark:text-gray-400"
                         for="to">To:</label>
                     <input
                         class="appearance-none block w-full rounded-md bg-white text-gray-700 border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="to" type="text">
+                        id="to" type="text" name="to">
                 </div>
                 <div class="grid xl:grid-cols-2 xl:gap-6">
                     <div class="relative z-0 w-full mb-6 group">
@@ -31,7 +31,7 @@
                         </label>
                         <input
                             class="appearance-none block w-full rounded-md bg-white text-gray-700 border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                            id="departure-date" type="date">
+                            id="departure-date" type="date" name="departure-date">
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <label class="block text-lg tracking-wide text-gray-500 dark:text-gray-400" for="return-date">
@@ -39,7 +39,7 @@
                         </label>
                         <input
                             class="appearance-none rounded-md block w-full bg-white text-gray-700 border border-gray-200  py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                            id="return-date" type="date">
+                            id="return-date" type="date" name="return-date">
                     </div>
                 </div>
                 <div class="grid xl:gap-1">
@@ -48,20 +48,20 @@
                     </label>
                     <input
                         class="appearance-none rounded-md block w-full bg-white text-gray-700 border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="adults" type="number" value="1">
+                        id="adults" type="number" value="1" name="adults">
 
                     <label class="block text-lg tracking-wide text-gray-500 dark:text-gray-400 mt-5" for="children">
                         Children (2-11 years old):
                     </label>
                     <input
                         class="appearance-none rounded-md block w-full bg-white text-gray-700 border border-gray-200  py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="children" type="number" value="0">
+                        id="children" type="number" value="0" name="children">
 
                     <label class="block text-lg tracking-wide text-gray-500 dark:text-gray-400 mt-5" for="kids">
                         Kids (< 2 years old): </label>
                             <input
                                 class="appearance-none rounded-md block w-full bg-white text-gray-700 border border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="kids" type="number" value="0">
+                                id="kids" type="number" value="0" name="kids">
 
 
                             <button type="button"
