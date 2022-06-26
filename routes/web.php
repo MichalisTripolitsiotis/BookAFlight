@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AirportSearchController;
+use App\Http\Controllers\BookerController;
 use App\Http\Controllers\Web\SearchFlightController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,8 +24,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
 Route::middleware('auth')->group(function () {
-    Route::post('/search', [AirportSearchController::class, 'find'])->name('searchAirport');
+    Route::get('/search', [AirportSearchController::class, 'find'])->name('searchAirport');
+    Route::post('/book', [BookerController::class, 'store'])->name('bookFlight');
 });
 
 require __DIR__ . '/auth.php';

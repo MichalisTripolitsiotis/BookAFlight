@@ -10,29 +10,12 @@ class AirportSearchController extends Controller
     /**
      * Find abd return a given airport through a get request.
      */
-    public function find()
+    public function find(string $attribute)
     {
-        $url = 'https://test.api.amadeus.com/v1/reference-data/locations?subType=CITY&keyword=MAD';
+        $city = $attribute;
+        $url = 'https://test.api.amadeus.com/v1/reference-data/locations?subType=CITY&keyword=' . $city;
         $access_token = app(ClientController::class)->authenticate();
 
-        // $data = [
-        //     'originDestinations' => [
-        //         [
-        //             'id' => 1,
-        //             'originLocationCode' => 'SKG',
-        //             'destinationLocationCode' => 'ATH',
-        //             'departureDateTimeRange' => [
-        //                 'date' => '2022-12-27'
-        //             ]
-        //         ]
-        //     ],
-        //     'travelers' => [
-        //         [
-        //             'id' => 1,
-        //             'travelerType' => 'ADULT'
-        //         ]
-        //     ]
-        // ];
 
         try {
             $client = new Client($url, $access_token);
