@@ -8,11 +8,36 @@ use Livewire\Component;
 class InputDropdown extends Component
 {
     public $title;
-    public $search = "";
+    public $query = "";
+    public $searchResults = [];
 
     public function mount($title)
     {
         $this->title = $title;
+    }
+
+    /**
+     * Get the related results based on the input query.
+     *
+     * @return $this
+     */
+    public function updatedQuery()
+    {
+        if (strlen($this->query) >= 2) {
+            $this->searchResults = app(AirportSearchController::class)->find($this->query);
+        }
+    }
+
+    /**
+     * Select the result.
+     *
+     * @param string $record
+     *
+     * @return $this
+     */
+    public function select($record)
+    {
+        $this->query = $record;
     }
 
     /**
@@ -22,12 +47,6 @@ class InputDropdown extends Component
      */
     public function render()
     {
-        $searchResults = [];
-
-        if (strlen($this->search) >= 2) {
-            $searchResults = app(AirportSearchController::class)->find($this->search);
-        }
-
-        return view('livewire.input-dropdown', ['data' => $searchResults]);
+        return view('livewire.input-dropdown', ['data' => $this->searchResults]);
     }
 }
